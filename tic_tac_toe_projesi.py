@@ -1,108 +1,90 @@
-from random import randrange
+import random
 
-def DisplayBoard(board):
+def display_board(board):
+    print("+-------+-------+-------+")
+    for r in range(3):
+        print("|       |       |       |")
+        print("|   " + "   |   ".join(str(board[r][c]) for c in range(3)) + "   |")
+        print("|       |       |       |")
+        print("+-------+-------+-------+")
 
-    print("+-------+-------+-------+")
-    print("|       |       |       |")
-    print("|   " + str(board[0][0]) + "   |   " + str(board[0][1]) + "   |   " + str(board[0][2]) + "   |")
-    print("|       |       |       |")
-    print("+-------+-------+-------+")
-    print("|       |       |       |")
-    print("|   " + str(board[1][0]) + "   |   " + str(board[1][1]) + "   |   " + str(board[1][2]) + "   |")
-    print("|       |       |       |")
-    print("+-------+-------+-------+")
-    print("|       |       |       |")
-    print("|   " + str(board[2][0]) + "   |   " + str(board[2][1]) + "   |   " + str(board[2][2]) + "   |")
-    print("|       |       |       |")
-    print("+-------+-------+-------+")
-
-def EnterMove(board):
-
+def enter_move(board):
     while True:
         try:
-            move = int(input("Hamleni yap (1-9): "))
-
+            move = int(input("Hamleni yap (1-9): ").strip())
             if move < 1 or move > 9:
                 print("Geçersiz hamle. 1-9 arası bir sayı girmelisiniz.")
                 continue
-
-            move -= 1 
-            row = move // 3
-            col = move % 3
-            
-            if board[row][col] == 'X' or board[row][col] == 'O':
+            move -= 1
+            row, col = divmod(move, 3)
+            if board[row][col] in ('X', 'O'):
                 print("Bu kare zaten dolu. Başka bir kare seçin.")
-            else:
-                board[row][col] = 'O'
-                break 
-                
+                continue
+            board[row][col] = 'O'
+            break
         except ValueError:
             print("Geçersiz giriş. Lütfen bir sayı girin.")
 
-def MakeListOfFreeFields(board):
-
+def make_list_of_free_fields(board):
     free_fields = []
     for r in range(3):
         for c in range(3):
-            if board[r][c] != 'X' and board[r][c] != 'O':
+            if board[r][c] not in ('X', 'O'):
                 free_fields.append((r, c))
     return free_fields
 
-def VictoryFor(board, sign):
-
-    for r in range(3):
-        if board[r][0] == sign and board[r][1] == sign and board[r][2] == sign:
+def victory_for(board, sign):
+    for i in range(3):
+        if all(board[i][j] == sign for j in range(3)):
             return True
-
-    for c in range(3):
-        if board[0][c] == sign and board[1][c] == sign and board[2][c] == sign:
+        if all(board[j][i] == sign for j in range(3)):
             return True
-
     if board[0][0] == sign and board[1][1] == sign and board[2][2] == sign:
         return True
     if board[0][2] == sign and board[1][1] == sign and board[2][0] == sign:
         return True
-
     return False
 
-def DrawMove(board):
+def draw_move(board):
+    free = make_list_of_free_fields(board)
+    if not free:
+        return
+    r, c = random.choice(free)
+    board[r][c] = 'X'
 
-    free = MakeListOfFreeFields(board)
-    if len(free) > 0:
-        index = randrange(len(free))
-        row, col = free[index]
-        board[row][col] = 'X'
+def count_moves(board):
+    return sum(1 for r in range(3) for c in range(3) if board[r][c] in ('X', 'O'))
 
-board = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
+def main():
+    board = [
+        ['1', '2', '3'],
+        ['4', '5', '6'],
+        ['7', '8', '9']
+    ]
+    
+    board[1][1] = 'X' 
+    print("Oyun başlıyor!")
+    display_board(board)
 
-board[1][1] = 'X'
-moves_made = 1 
+    while True:
+        if not make_list_of_free_fields(board):
+            print("Berabere!")
+            break
+        enter_move(board)
+        display_board(board)
+        if victory_for(board, 'O'):
+            print("Kazandın!")
+            break
 
-print("Oyun başlıyor!")
-DisplayBoard(board)
+        if not make_list_of_free_fields(board):
+            print("Berabere!")
+            break
+        print("Bilgisayar hamlesini yapıyor...")
+        draw_move(board)
+        display_board(board)
+        if victory_for(board, 'X'):
+            print("Bilgisayar kazandı!")
+            break
 
-while moves_made < 9:
-    EnterMove(board)
-    moves_made += 1
-    DisplayBoard(board)
-
-    if VictoryFor(board, 'O'):
-        print("Kazandın!")
-        break
-
-    if moves_made == 9:
-        print("Berabere!")
-        break
-
-    print("Bilgisayar hamlesini yapıyor...")
-    DrawMove(board)
-    moves_made += 1
-    DisplayBoard(board)
-
-    if VictoryFor(board, 'X'):
-        print("Bilgisayar kazandı!")
-        break
+if __name__ == "__main__":
+    main()
