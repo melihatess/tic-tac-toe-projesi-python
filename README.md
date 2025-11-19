@@ -82,3 +82,8 @@ Projenin geliştirilmesine katkıda bulunmak isterseniz çok memnun olurum.
 ## Lisans
 
 Bu proje **MIT Lisansı** altında yayımlanmıştır. Bu, herkesin projeyi kullanabileceği, değiştirebileceği ve dağıtabileceği anlamına gelir. Lisansın tam metni için lütfen [LICENSE](LICENSE) dosyasına bakın.  Şimdi nasıl?
+
+***
+
+## İletişim
+Meliha Ateş - melihates9407@gmail.com
