@@ -54,6 +54,7 @@ Oyunu başlattıktan sonra, **siz 'O'** olarak hamle yapacaksınız ve **bilgisa
 Hamle yaparken tahtayı aşağıdaki gibi hayal edin:
 
 | 1 | 2 | 3 |
+|---|---|---|
 | 4 | 5 | 6 |
 | 7 | 8 | 9 |
 
