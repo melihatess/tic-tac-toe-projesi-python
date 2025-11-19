@@ -37,7 +37,6 @@ Projenin çalışması için sadece **Python 3.x** gereklidir.
 
 ***
 
-...
 ## Kullanım
 
 Oyunu başlattıktan sonra, **siz 'O'** olarak hamle yapacaksınız ve **bilgisayar 'X'** olarak cevap verecektir.
@@ -63,7 +62,7 @@ Hamle yaparken tahtayı aşağıdaki gibi hayal edin:
     ```
     Hamleni yap (1-9): 7
     ```
-    Ardından bilgisayar otomatik olarak sıradaki hamlesini yapacaktır.
+* Ardından bilgisayar otomatik olarak sıradaki hamlesini yapacaktır.
   
 ***
 
