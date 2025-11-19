@@ -1,8 +1,8 @@
-# ❌⭕ Python Komut Satırı Tic-Tac-Toe Oyunu
+# Python ile Geliştirilen Tic-Tac-Toe Oyunu
 
 > Python kullanılarak geliştirilmiş, Oyuncu ('O') ile Rastgele Bir Şekilde Hamle Yapan Bilgisayar ('X') arasında oynanan basit Tic-Tac-Toe oyun uygulamasıdır.
 
-## 🌟 Özellikler
+## Özellikler
 
 * **Tek Oyunculu Mod:** Oyuncu ('O') vs. Bilgisayar ('X').
 * **Bilgisayar Başlangış Hamlesi:** Oyun her zaman bilgisayarın tahtanın orta karesini (5 = 'X') almasıyla başlar. 
@@ -12,7 +12,7 @@
 
 ***
 
-## ⚙️ Kurulum ve Başlatma
+## Kurulum ve Başlatma
 
 Bu projeyi yerel bilgisayarınızda çalıştırmak için aşağıdaki adımları takip edin.
 
@@ -38,7 +38,7 @@ Projenin çalışması için sadece **Python 3.x** gereklidir.
 ***
 
 ...
-## 🕹️ Kullanım
+## Kullanım
 
 Oyunu başlattıktan sonra, **siz 'O'** olarak hamle yapacaksınız ve **bilgisayar 'X'** olarak cevap verecektir.
 
@@ -67,9 +67,9 @@ Hamle yaparken tahtayı aşağıdaki gibi hayal edin:
   
 ***
 
-## 🤝 Katkıda Bulunma
+## Katkıda Bulunma
 
-Projenin geliştirilmesine katkıda bulunmak isterseniz çok memnun oluruz!
+Projenin geliştirilmesine katkıda bulunmak isterseniz çok memnun olurum.
 
 * 1.  Depoyu (Fork) çatallayın.
 * 2.  Yeni bir özellik veya hata düzeltmesi için bir dal (branch) oluşturun. (`git checkout -b feature/YeniOzellik`)
@@ -79,6 +79,6 @@ Projenin geliştirilmesine katkıda bulunmak isterseniz çok memnun oluruz!
 
 ***
 
-## 📜 Lisans
+## Lisans
 
 Bu proje **MIT Lisansı** altında yayımlanmıştır. Bu, herkesin projeyi kullanabileceği, değiştirebileceği ve dağıtabileceği anlamına gelir. Lisansın tam metni için lütfen [LICENSE](LICENSE) dosyasına bakın.  Şimdi nasıl?
