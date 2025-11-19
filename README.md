@@ -1,10 +1,10 @@
 # ❌⭕ Python Komut Satırı Tic-Tac-Toe Oyunu
 
-> Python kullanılarak geliştirilmiş, İnsan oyuncu ('O') ile Rastgele Bir Şekilde Hamle Yapan Bilgisayar ('X') arasında oynanan basit Tic-Tac-Toe oyun uygulamasıdır..
+> Python kullanılarak geliştirilmiş, Oyuncu ('O') ile Rastgele Bir Şekilde Hamle Yapan Bilgisayar ('X') arasında oynanan basit Tic-Tac-Toe oyun uygulamasıdır.
 
 ## 🌟 Özellikler
 
-* **Tek Oyunculu Mod:** İnsan oyuncu ('O') vs. Bilgisayar ('X').
+* **Tek Oyunculu Mod:** Oyuncu ('O') vs. Bilgisayar ('X').
 * **Bilgisayar Başlangış Hamlesi:** Oyun her zaman bilgisayarın tahtanın orta karesini (5 = 'X') almasıyla başlar. 
 * **Akıllı Rakip:** Bilgisayar, mevcut boş kareler arasından rastgele bir seçim yaparak hamle yapar.
 * **Komut Satırı Arayüzü (CLI):** Kolay ve hızlı başlatma.
