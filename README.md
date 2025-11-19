@@ -71,11 +71,11 @@ Hamle yaparken tahtayı aşağıdaki gibi hayal edin:
 
 Projenin geliştirilmesine katkıda bulunmak isterseniz çok memnun oluruz!
 
-1.  Depoyu (Fork) çatallayın.
-2.  Yeni bir özellik veya hata düzeltmesi için bir dal (branch) oluşturun. (`git checkout -b feature/YeniOzellik`)
-3.  Değişikliklerinizi kaydedin. (`git commit -m 'Yeni özellik: Aciklama'`)
-4.  Dalı yükleyin. (`git push origin feature/YeniOzellik`)
-5.  Bir **Pull Request** açın.
+* 1.  Depoyu (Fork) çatallayın.
+* 2.  Yeni bir özellik veya hata düzeltmesi için bir dal (branch) oluşturun. (`git checkout -b feature/YeniOzellik`)
+* 3.  Değişikliklerinizi kaydedin. (`git commit -m 'Yeni özellik: Aciklama'`)
+* 4.  Dalı yükleyin. (`git push origin feature/YeniOzellik`)
+* 5.  Bir **Pull Request** açın.
 
 ***
 
